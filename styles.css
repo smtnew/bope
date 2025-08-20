@@ -593,6 +593,50 @@ img {
   justify-content: center;
 }
 
+/* Floating Scroll to Top Button */
+.scroll-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--primary-fore);
+  border: none;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-elev);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.scroll-top.visible {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-top:hover {
+  background: hsl(8 78% 45%);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px -12px hsl(8 78% 52% / 0.4);
+}
+
+.scroll-top:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.scroll-top svg {
+  width: 20px;
+  height: 20px;
+}
+
 /* Responsive */
 @media (min-width: 640px) {
   .grid {

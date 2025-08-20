@@ -684,6 +684,13 @@
       </div>
     </section>
 
+    <!-- Floating Back to Top Button -->
+    <button id="scroll-top" class="scroll-top" aria-label="Înapoi sus">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+      </svg>
+    </button>
+
     <footer class="footer">
       <div class="container">
         <div class="footer-content">
@@ -799,6 +806,26 @@
               });
             }
           }
+        });
+      });
+
+      // Floating scroll to top button functionality
+      const scrollTopBtn = document.getElementById("scroll-top");
+      
+      // Show button when scrolling down
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 300) {
+          scrollTopBtn.classList.add("visible");
+        } else {
+          scrollTopBtn.classList.remove("visible");
+        }
+      });
+
+      // Scroll to top when button is clicked
+      scrollTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
         });
       });
     </script>
