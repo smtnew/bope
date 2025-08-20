@@ -116,6 +116,7 @@ img {
   background: var(--card);
   width: 100%;
   max-width: 100%;
+  scroll-margin-top: 60px;
 }
 .hero img {
   height: min(36vh, 400px);
@@ -266,6 +267,7 @@ img {
 /* Grid + cards */
 .section {
   padding: 24px 0;
+  scroll-margin-top: 30px;
 }
 .grid {
   display: grid;
