@@ -223,45 +223,71 @@ img {
   position: relative;
   overflow: hidden;
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: 18px;
   background: var(--card);
   width: 100%;
   max-width: 100%;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.25s ease;
 }
+
+.cat-banner:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-elev);
+  border-color: hsl(8 78% 85%);
+}
+
 .cat-banner img {
   height: 200px;
   width: 100%;
   object-fit: cover;
+  transition: transform 0.25s ease;
 }
+
+.cat-banner:hover img {
+  transform: scale(1.02);
+}
+
 .cat-banner .tint {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     135deg,
-    hsl(8 78% 52% /0.7),
-    hsl(142 71% 35% /0.6)
+    hsl(8 78% 52% /0.8),
+    hsl(142 71% 35% /0.7)
   );
 }
+
 .cat-banner .text {
   position: absolute;
   inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 16px;
+  padding: 0 20px;
   color: var(--primary-fore);
   text-align: center;
+  background: linear-gradient(
+    135deg,
+    hsl(8 78% 52% /0.1),
+    hsl(142 71% 35% /0.1)
+  );
 }
+
 .cat-title {
   font-size: clamp(24px, 4.5vw, 36px);
   font-weight: 900;
   letter-spacing: -0.02em;
   margin-bottom: 8px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
+
 .cat-sub {
   font-size: 0.95rem;
   opacity: 0.95;
   margin-top: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  font-weight: 500;
 }
 
 /* Grid + cards */
@@ -277,45 +303,93 @@ img {
 .card {
   background: var(--card);
   border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 12px;
+  border-radius: 16px;
+  padding: 16px;
   box-shadow: var(--shadow-soft);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
 }
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
 .card:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   box-shadow: var(--shadow-elev);
+  border-color: hsl(8 78% 85%);
 }
+
+.card:hover::before {
+  opacity: 1;
+}
+
 .card h3 {
   margin: 0;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   font-weight: 700;
+  line-height: 1.3;
+  color: var(--fg);
+  position: relative;
+  z-index: 1;
 }
-.section .grid {
-  margin-top: 12px;
-}
+
 .card .ing {
-  margin: 6px 0 0;
+  margin: 8px 0 0;
   color: var(--muted-fg);
   font-size: 0.95rem;
+  line-height: 1.4;
+  position: relative;
+  z-index: 1;
 }
+
 .card .right {
   text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  position: relative;
+  z-index: 1;
 }
+
 .price {
   color: var(--primary);
   font-weight: 900;
   font-size: 1.35rem;
+  white-space: nowrap;
+  line-height: 1;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
+
 .grams {
   color: var(--muted-fg);
   font-size: 12px;
+  font-weight: 500;
+  background: var(--muted);
+  padding: 2px 8px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
 }
+
+.section .grid {
+  margin-top: 20px;
+}
+
 .row {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 10px;
+  gap: 16px;
 }
 
 /* Footer */
@@ -641,6 +715,7 @@ img {
 @media (min-width: 640px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
   }
   .contact-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -666,18 +741,27 @@ img {
   .hero-description {
     margin: 0 0 18px;
   }
+  .card {
+    padding: 18px;
+  }
+  .card h3 {
+    font-size: 1.15rem;
+  }
+  .price {
+    font-size: 1.4rem;
+  }
 }
 @media (min-width: 960px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+    gap: 20px;
   }
   .contact-grid {
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 24px;
   }
   .hero .content {
-    padding: 20px;
+    padding: 24px;
   }
   .nav {
     display: flex;
@@ -689,7 +773,7 @@ img {
     display: none !important;
   }
   .ctas {
-    gap: 16px;
+    gap: 20px;
   }
   .hero img {
     height: min(45vh, 500px);
@@ -703,6 +787,79 @@ img {
     margin: 0 0 12px;
   }
   .hero-description {
-    margin: 0 0 20px;
+    margin: 0 0 24px;
+  }
+  .card {
+    padding: 20px;
+  }
+  .card h3 {
+    font-size: 1.2rem;
+  }
+  .price {
+    font-size: 1.45rem;
+  }
+  .section {
+    padding: 32px 0;
+  }
+}
+
+/* Mobile-first improvements */
+@media (max-width: 639px) {
+  .card {
+    padding: 14px;
+  }
+  .card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 4px;
+  }
+  .card .ing {
+    font-size: 0.9rem;
+    margin: 6px 0 0;
+  }
+  .price {
+    font-size: 1.25rem;
+  }
+  .grams {
+    font-size: 11px;
+    padding: 1px 6px;
+  }
+  .row {
+    gap: 12px;
+  }
+  .section {
+    padding: 20px 0;
+  }
+  .grid {
+    gap: 10px;
+  }
+  .cat-banner {
+    border-radius: 16px;
+  }
+  .cat-banner .text {
+    padding: 0 16px;
+  }
+  .cat-title {
+    font-size: clamp(22px, 5vw, 28px);
+  }
+  .cat-sub {
+    font-size: 0.9rem;
+  }
+}
+
+/* Ensure minimum touch target size for mobile */
+@media (max-width: 639px) {
+  .btn {
+    min-height: 44px;
+    padding: 14px 20px;
+  }
+  .contact-link {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .burger {
+    min-height: 44px;
+    min-width: 44px;
   }
 }
