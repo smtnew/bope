@@ -1,133 +1,133 @@
 # 🍕 Bope - Pizzeria Comunitară în Dezmir
 
-A beautiful, responsive website for Bope, a community-focused pizzeria in Dezmir, Romania. This project showcases their authentic Neapolitan pizza menu, natural lemonades, and elegant cocktails while highlighting their commitment to supporting disadvantaged children through the "Asociația Something New" foundation.
+Un site web frumos și responsiv pentru Bope, o pizzerie orientată spre comunitate din Dezmir, România. Acest proiect prezintă meniul lor autentic de pizza napoletană, limonade naturale și cocktailuri elegante.
 
 ![Bope Pizzeria](src/assets/hero-pizza.jpg)
 
-## ✨ Features
+## ✨ Funcționalități
 
-- **🍕 Authentic Menu Display** - Showcases varieties of Neapolitan pizza with premium ingredients
-- **🍋 Natural Beverages** - Features 4 types of natural lemonades and 6 cocktail options
-- **📱 Mobile-First Design** - Fully responsive design that works perfectly on all devices
-- **🎨 Modern UI/UX** - Clean, professional design with smooth animations and hover effects
-- **♿ Accessibility** - Built with accessibility in mind, including proper ARIA labels and keyboard navigation
-- **🔍 SEO Optimized** - Rich structured data, meta tags, and Open Graph support
-- **⚡ Performance** - Lightweight, fast-loading with no external dependencies
+- 🍕 Afișare meniu autentic – prezintă varietăți de pizza napoletană cu ingrediente premium
+- 🍋 Băuturi naturale – include 4 tipuri de limonadă naturală și 6 opțiuni de cocktailuri
+- 📱 Design Mobile-First – complet responsiv, funcționează perfect pe toate dispozitivele
+- 🎨 UI/UX modern – design curat și profesional, cu animații line și efecte hover
+- ♿ Accesibilitate – construit cu atenție la accesibilitate, incluzând etichete ARIA corecte și navigare din tastatură
+- 🔍 Optimizare SEO – date structurate, meta tag-uri și suport Open Graph
+- ⚡ Performanță – ușor, se încarcă rapid, fără dependențe externe
 
-## 🚀 Live Demo
+## 🚀 Demonstrație live
 
-Visit the live website: [bope.something-new.ro](https://bope.something-new.ro)
+Vizitează site-ul live: [bope.something-new.ro](https://bope.something-new.ro)
 
-## 🛠️ Technology Stack
+## 🛠️ Stivă tehnologică
 
-- **Frontend**: Pure HTML5, CSS3, Vanilla JavaScript
-- **Design**: CSS Grid, Flexbox, CSS Custom Properties
-- **Responsive**: Mobile-first approach with progressive enhancement
-- **Performance**: Optimized images, minimal JavaScript, efficient CSS
-- **Deployment**: GitHub Pages with custom domain
+- Frontend: HTML5 pur, CSS3, JavaScript Vanilla
+- Design: CSS Grid, Flexbox, CSS Custom Properties
+- Responsive: abordare mobile-first cu îmbunătățiri progresive
+- Performanță: imagini optimizate, JavaScript minim, CSS eficient
+- Deploy: GitHub Pages cu domeniu personalizat
 
-## 📱 Responsive Design
+## 📱 Design responsiv
 
-The website is built with a mobile-first approach and includes:
+Site-ul este construit cu o abordare mobile-first și include:
 
-- Responsive navigation with mobile burger menu
-- Adaptive grid layouts for different screen sizes
-- Optimized typography using CSS clamp()
-- Touch-friendly interactive elements
+- Navigare responsive cu meniu tip „burger" pe mobil
+- Layout-uri de grid adaptive pentru diferite dimensiuni de ecran
+- Tipografie optimizată folosind CSS clamp()
+- Elemente interactive prietenoase pentru touch
 
-## 🎯 Project Structure
+## 🎯 Structura proiectului
 
 ```
 bope/
-├── index.html          # Main HTML file with semantic structure
-├── styles.css          # CSS with custom properties and responsive design
-├── CNAME              # Custom domain configuration
+├── index.html          # Fișierul principal HTML cu structură semantică
+├── styles.css          # CSS cu proprietăți personalizate și design responsiv
+├── CNAME               # Configurare domeniu personalizat
 ├── src/
-│   └── assets/        # Images and media files
+│   └── assets/         # Imagini și fișiere media
 │       ├── hero-pizza.jpg
 │       ├── cat-pizza.jpg
 │       ├── cat-lemonade.jpg
 │       ├── cat-cocktails.jpg
 │       └── favicon.png
-└── README.md          # This file
+└── README.md           # Acest fișier
 ```
 
-## 🚀 Getting Started
+## 🚀 Început rapid
 
-### Prerequisites
+### Cerințe preliminare
 
-- A modern web browser
-- Basic knowledge of HTML/CSS/JavaScript (for customization)
+- Un browser web modern
+- Cunoștințe de bază de HTML/CSS/JavaScript (pentru personalizare)
 
-### Installation
+### Instalare
 
-1. **Clone the repository**
+1. Clonează repository-ul
 
    ```bash
    git clone https://github.com/yourusername/bope.git
    cd bope
    ```
 
-2. **Open in your browser**
+2. Deschide în browser
 
    ```bash
-   # Simply open index.html in your browser
-   # Or use a local server:
+   # Deschide direct index.html în browser
+   # Sau folosește un server local:
    python -m http.server 8000
-   # Then visit http://localhost:8000
+   # Apoi accesează http://localhost:8000
    ```
 
-3. **Customize for your needs**
-   - Update content in `index.html`
-   - Modify styles in `styles.css`
-   - Replace images in `src/assets/`
+3. Personalizează pentru nevoile tale
+   - Actualizează conținutul în `index.html`
+   - Modifică stilurile în `styles.css`
+   - Înlocuiește imaginile în `src/assets/`
 
-## 🎨 Customization
+## 🎨 Personalizare
 
-### Colors
+### Culori
 
-The website uses CSS custom properties for easy theming:
+Site-ul folosește CSS custom properties pentru o temare ușoară:
 
 ```css
 :root {
-  --primary: hsl(8 78% 52%); /* Neapolitan red */
-  --accent: hsl(142 71% 35%); /* Basil green */
-  --bg: hsl(36 33% 98%); /* Warm background */
+  --primary: hsl(8 78% 52%); /* Roșu napoletan */
+  --accent: hsl(142 71% 35%); /* Verde busuioc */
+  --bg: hsl(36 33% 98%); /* Fundal cald */
 }
 ```
 
-### Content
+### Conținut
 
-- Update menu items in the HTML
-- Modify business information in the contact section
-- Change images in the assets folder
+- Actualizează produsele din meniu în HTML
+- Modifică informațiile despre afacere în secțiunea de contact
+- Schimbă imaginile din folderul assets
 
-### Styling
+### Stilizare
 
-- Adjust spacing, typography, and colors in `styles.css`
-- Modify responsive breakpoints for different layouts
-- Customize animations and transitions
+- Ajustează spațierile, tipografia și culorile în `styles.css`
+- Modifică breakpoint-urile responsiv pentru layout-uri diferite
+- Personalizează animațiile și tranzițiile
 
-## 📱 Browser Support
+## 📱 Suport pentru browsere
 
-- ✅ Chrome (latest)
-- ✅ Firefox (latest)
-- ✅ Safari (latest)
-- ✅ Edge (latest)
-- ✅ Mobile browsers (iOS Safari, Chrome Mobile)
+- ✅ Chrome (ultima versiune)
+- ✅ Firefox (ultima versiune)
+- ✅ Safari (ultima versiune)
+- ✅ Edge (ultima versiune)
+- ✅ Browsere mobile (iOS Safari, Chrome Mobile)
 
-## 🔧 Development
+## 🔧 Dezvoltare
 
-### Adding New Menu Items
+### Adăugarea de produse noi în meniu
 
-1. Add the item to the appropriate section in `index.html`
-2. Follow the existing card structure:
+1. Adaugă produsul în secțiunea corespunzătoare din `index.html`
+2. Urmează structura existentă a cardului:
    ```html
    <article class="card">
      <div class="row">
        <div>
-         <h3>Item Name</h3>
-         <p class="ing">ingredients description</p>
+         <h3>Numele produsului</h3>
+         <p class="ing">descriere ingrediente</p>
        </div>
        <div class="right">
          <div class="price">XX RON</div>
@@ -137,50 +137,29 @@ The website uses CSS custom properties for easy theming:
    </article>
    ```
 
-### Adding New Sections
+### Adăugarea de secțiuni noi
 
-1. Create a new section following the existing pattern
-2. Add navigation links in the header
-3. Update the CSS grid layouts if needed
+1. Creează o secțiune nouă urmând modelul existent
+2. Adaugă link-uri de navigare în header
+3. Actualizează layout-urile de grid în CSS dacă este necesar
 
-## 🚀 Deployment
+## 🚀 Publicare
 
 ### GitHub Pages
 
-1. Push your code to a GitHub repository
-2. Enable GitHub Pages in repository settings
-3. Set source to main branch
-4. Add custom domain in CNAME file (optional)
+1. Fă push la cod într-un repository GitHub
+2. Activează GitHub Pages din setările repository-ului
+3. Setează sursa pe ramura main
+4. Adaugă domeniul personalizat în fișierul CNAME (opțional)
 
-### Other Hosting
+## 📊 Performanță
 
-- Upload files to any web hosting service
-- Ensure all assets are properly referenced
-- Test responsive design on different devices
+- Scor Lighthouse: 95+ (Performance, Accessibility, Best Practices, SEO)
+- Dimensiune pagină: < 500KB
+- Timp de încărcare: < 2 secunde pe 3G
+- Core Web Vitals: optimizat pentru toți indicatorii
 
-## 📊 Performance
 
-- **Lighthouse Score**: 95+ (Performance, Accessibility, Best Practices, SEO)
-- **Page Size**: < 500KB
-- **Load Time**: < 2 seconds on 3G
-- **Core Web Vitals**: Optimized for all metrics
+⭐ Acordă un star acestui repository dacă ți-a fost de ajutor!
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 🙏 Acknowledgments
-
-- **Asociația Something New** - For supporting disadvantaged children
-- **Community** - The people of Dezmir for their support
-- **Open Source** - Built with modern web standards and best practices
-
----
-
-⭐ **Star this repository if you found it helpful!**
-
-_Built with ❤️ for the community_
+_Creat cu ❤️ pentru comunitate_
